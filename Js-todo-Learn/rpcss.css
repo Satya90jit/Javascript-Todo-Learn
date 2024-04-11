@@ -1,0 +1,41 @@
+.singleTodo {
+    color: blue;
+    margin: 12px;
+}
+.todoText{
+    margin: 4px;
+
+}
+.actionDiv {
+    display: flex;
+
+}
+.edit {
+ 
+}
+.delete {
+
+}
+
+.removeAll{
+    margin-top: 15px;
+    color: white;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 7px;
+}
+
+
+.notodo {
+    color: red;
+    font-size: medium;
+}
+.editing {
+    color: green;
+    
+}
+.image {
+    height: 100px;
+    width: 200px;
+}
