@@ -97,13 +97,13 @@ window.addEventListener("load", () => {
   const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
 
   // Event listener for the form submission
-  todoForm.addEventListener("submit", (e) => {
+  todoForm.addEventListener("submit", async (e) => {
     e.preventDefault(); // Prevent the default form submission
     const todoText = todoInput.value.trim();
     const imageFile = imageInput.files[0]; // Get the image file
 
     if (todoText !== "" && imageFile) {
-      const imageUrl = convertImageToDataURL(imageFile); //! this line will stop execution until the convertImageToDataUrl no send any resolve or reject( as await keyword) , // Wait for the Promise to resolve
+      const imageUrl = await convertImageToDataURL(imageFile); //! this line will stop execution until the convertImageToDataUrl no send any resolve or reject( as await keyword) , // Wait for the Promise to resolve
       addTodoToDOM(todoText, imageUrl); // Add todo to the list  //! this line will execute after that ,  This line will now use the resolved value
       saveTodos(); // Save todos to local storage
       todoInput.value = ""; // Clear the input field
@@ -112,8 +112,6 @@ window.addEventListener("load", () => {
       removeAllBtn.style.display = "block"; // Display the "remove all btn"
     }
   });
-
-  console.log("...............................................");
 
   // Event listener for the "Add" button
   //   submitBtn.addEventListener("click", async () => {
