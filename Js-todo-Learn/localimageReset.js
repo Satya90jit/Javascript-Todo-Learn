@@ -113,7 +113,7 @@ window.addEventListener("load", () => {
     }
   });
 
-  // Event listener for the "Add" button
+  //? Event listener for the "Add" button
   //   submitBtn.addEventListener("click", async () => {
   //     const todoText = todoInput.value.trim();
   //     const imageFile = imageInput.files[0]; // Get the image file
